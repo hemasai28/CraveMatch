@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CraveMatch | Find Your Perfect Food</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍴 <span>Crave</span>Match
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ✨ AI-Powered Food Discovery
+            </div>
+
+            <h1>
+                Tell us your
+                <span>craving.</span>
+                <br>
+                We'll find your match.
+            </h1>
+
+            <p>
+                Describe whatever you're craving in your own words.
+                CraveMatch understands your preferences and finds
+                food that fits them.
+            </p>
+
+
+            <!-- CRAVING SEARCH BOX -->
+
+            <div class="search-box">
+
+                <textarea
+                    id="cravingInput"
+                    placeholder="Tell us what you're craving...&#10;Example: I want something spicy, crispy and vegetarian under ₹150"
+                ></textarea>
+
+                <button id="findFoodBtn">
+                    Find My Food
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- EXAMPLE CRAVINGS -->
+
+            <div class="examples">
+
+                <p>Try something like:</p>
+
+                <div class="example-buttons">
+
+                    <button class="example-btn">
+                        🌶️ Spicy & Crispy
+                    </button>
+
+                    <button class="example-btn">
+                        🍫 Sweet & Crunchy
+                    </button>
+
+                    <button class="example-btn">
+                        🥗 Healthy Dinner
+                    </button>
+
+                    <button class="example-btn">
+                        💪 High Protein
+                    </button>
+
+                    <button class="example-btn">
+                        💰 Under ₹150
+                    </button>
+
+                    <button class="example-btn">
+                        🍰 Healthy Dessert
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOADING SECTION ================= -->
+
+    <section class="loading-section" id="loadingSection">
+
+        <div class="loader"></div>
+
+        <h2 id="loadingText">
+            Understanding your craving...
+        </h2>
+
+        <p>
+            Our AI is finding the best food matches for you.
+        </p>
+
+    </section>
+
+
+    <!-- ================= RESULTS SECTION ================= -->
+
+    <section class="results-section" id="resultsSection">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                ✨ YOUR RESULTS
+            </p>
+
+            <h2>
+                Your CraveMatches
+            </h2>
+
+            <p id="resultDescription">
+                Here are the foods that match your craving.
+            </p>
+
+        </div>
+
+
+        <!-- RESULTS WILL BE INSERTED HERE BY JAVASCRIPT -->
+
+        <div class="food-grid" id="foodGrid"></div>
+
+    </section>
+
+
+    <!-- ================= RECIPE MODAL ================= -->
+
+    <div class="modal-overlay" id="recipeModal">
+
+        <div class="modal">
+
+            <button class="close-btn" id="closeRecipe">
+                ×
+            </button>
+
+            <div id="recipeContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= RESTAURANT MODAL ================= -->
+
+    <div class="modal-overlay" id="restaurantModal">
+
+        <div class="modal">
+
+            <button class="close-btn" id="closeRestaurant">
+                ×
+            </button>
+
+            <div id="restaurantContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-it-works" id="how-it-works">
+
+        <div class="section-heading">
+
+            <p class="small-heading">
+                HOW IT WORKS
+            </p>
+
+            <h2>
+                From craving to plate 🍽️
+            </h2>
+
+            <p>
+                No complicated filters. Just tell us what you want.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    💭
+                </div>
+
+                <h3>
+                    Tell Us
+                </h3>
+
+                <p>
+                    Describe your craving naturally in your own words.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Understands
+                </h3>
+
+                <p>
+                    Our AI understands your taste, diet, budget and
+                    other requirements.
+                </p>
+
+            </div>
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Get Your Match
+                </h3>
+
+                <p>
+                    Get food recommendations with nutrition,
+                    recipes and nearby options.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <div>
+
+                <p class="small-heading">
+                    ABOUT CRAVEMATCH
+                </p>
+
+                <h2>
+                    Your craving.
+                    <br>
+                    Your way.
+                </h2>
+
+            </div>
+
+            <p>
+                CraveMatch is an AI-powered food discovery platform
+                designed to make finding food easier. Instead of
+                searching through endless menus and filters, users
+                simply describe what they feel like eating.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            🍴 <span>Crave</span>Match
+        </div>
+
+        <p>
+            Tell us your craving. We'll find your match.
+        </p>
+
+        <p class="copyright">
+            © 2026 CraveMatch • College Ideathon Prototype
+        </p>
+
+    </footer>
+
+
+    <!-- Our JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
